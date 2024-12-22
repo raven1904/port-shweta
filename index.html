@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio-Shweta</title>
+  <link href="style.css" rel="stylesheet" />
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const skills = ["Python", "C", "HTML", "CSS", "C++"];
+      const projects = [
+        { name: "Project 1", description: "A Python-based application.", link: "#" },
+        { name: "Project 2", description: "A web development project.", link: "#" }
+      ];
+
+      const skillsContainer = document.querySelector(".skills");
+      const projectsContainer = document.querySelector(".projects");
+
+      skills.forEach(skill => {
+        const skillCard = document.createElement("div");
+        skillCard.className = "card";
+        skillCard.textContent = skill;
+        skillsContainer.appendChild(skillCard);
+      });
+
+      projects.forEach(project => {
+        const projectCard = document.createElement("div");
+        projectCard.className = "card";
+        projectCard.innerHTML = `
+          <h3>${project.name}</h3>
+          <p>${project.description}</p>
+          <a href="${project.link}" target="_blank" class="button">View Project</a>
+        `;
+        projectsContainer.appendChild(projectCard);
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <p>Code, Create, Conquer!</p>
+  </header>
+
+  <div class="container">
+
+    <div class="section" id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm Shweta, a passionate Computer Engineering Student and an aspiring Python Developer with a keen
+        interest in python programming, web development, AI, and problem-solving. I enjoy creating innovative
+        solutions to real-world problems.</p>
+    </div>
+
+    <div class="section" id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+      </div>
+    </div>
+
+    <div class="section" id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+      </div>
+    </div>
+
+    <div class="section" id="contact">
+      <h2>Contact</h2>
+      <p>If you'd like to collaborate or have any questions, feel free to reach out!</p>
+      <ul>
+        <li>Mail me: shwetadorle2022@gmail.com</li>
+        <li><a href="https://www.linkedin.com/in/shweta0501" target="_blank">Visit my LinkedIn profile</a></li>
+        <li><a href="https://github.com/raven1904" target="_blank">Visit my GitHub profile</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Shweta Dorle. All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>
